@@ -14,224 +14,280 @@
 
 </head>
 <body>
-  <div class="general_container">
-  
-    <main class="main_container">
+  <main class="main_container">
 
-      <section class="welcome_nav">
-        <nav class="nav_container">
-          <div class="menu_wrapleft">
-            <button type="button" class="toggle_hamburger" aria-expanded="false" arial-label="menu"></button>
-            <ul class="menu_nav" aria-expanded="false">
-              <div>
-                <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Collections</a></li>
-                <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Men</a></li>
-                <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Women</a></li>
-                <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">About</a></li>
-                <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side"> Contact</a></li>
-               </div>
+    <section  id="welcome" class="welcome_nav">
+      <nav class="nav_container">
+        <div class="menu_wrapleft">
+          <button type="button" class="toggle_hamburger" aria-expanded="false" arial-label="menu"></button>
+          <ul class="menu_nav" aria-expanded="false">
+            <div>
+              <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Collections</a></li>
+              <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Men</a></li>
+              <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">Women</a></li>
+              <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side">About</a></li>
+              <li class="collection_item"  data-target-collection="false"><a href="#" class="nav_side"> Contact</a></li>
+             </div>
+          </ul>
+          <div class="logo">
+            <img src="./images/logo.svg" classs="icon_logo" alt="Oops">
+          </div>
+          <div class="desktop">
+            <ul class="desktop_nav">
+              <li><a href="#" class="nav_desk">Collections</a></li>
+              <li><a href="#" class="nav_desk">Men</a></li>
+              <li><a href="#" class="nav_desk">Women</a></li>
+              <li><a href="#" class="nav_desk">About</a></li>
+              <li><a href="#" class="nav_desk"> Contact</a></li> 
             </ul>
-            <div class="logo">
-              <img src="./images/logo.svg" classs="icon_logo" alt="Oops">
-            </div>
-            <div class="desktop">
-              <ul class="desktop_nav">
-                <li><a href="#" class="nav_desk">Collections</a></li>
-                <li><a href="#" class="nav_desk">Men</a></li>
-                <li><a href="#" class="nav_desk">Women</a></li>
-                <li><a href="#" class="nav_desk">About</a></li>
-                <li><a href="#" class="nav_desk"> Contact</a></li> 
-              </ul>
-            </div>
           </div>
-          <div class="menu_wrapright">
-            <div class="image_cart">
-              <img src="./images/icon-cart.svg" class="icon_cart" alt="Oops">
-            </div>
-            <div class="avatar">
-              <img src="./images/image-avatar.png" class="icon_avatar"  alt="Oops">
-            </div>
+        </div>
+        <div class="menu_wrapright">
+          <div class="image_cart">
+            <img src="./images/icon-cart.svg" class="icon_cart" alt="Oops">
           </div>
-          <div class="cart_picture">
-            <div class="cart_box" data-cart-toggled="false">
-              <h3 data-cart-toggled="false">Cart</h3>
-              <div class="cart_content" data-cart-toggled="true"> 
-                <div class="empty" data-add-cart="false" >
-                  <p>Your card is empty</p>
-                </div>
-                <div class="cart_filled" data-number-exist="false">
-                  <div class="cart_pro1 cart_pro" data-show-item="true" data-index-filled ="0">
-                    <div class="cart_selection">
-                      <div class="mini_image">
-                        <img src="./images/image-product-1-thumbnail.jpg" class="ready_buy" alt="Oops">
+          <div class="overlay"><p class="overlay_number"></p></div>
+          <div class="avatar">
+            <img src="./images/image-avatar.png" class="icon_avatar"  alt="Oops">
+          </div>
+        </div>
+        <div class="cart_picture">
+          <div class="cart_box" data-cart-toggled="false">
+            <h3 data-cart-toggled="false">Cart</h3>
+            <div class="cart_content" data-cart-toggled="true"> 
+              <div class="empty" data-add-cart="false" >
+                <p>Your card is empty</p>
+              </div>
+              <div class="cart_filled" data-number-exist="false">
+                <div class="cart_pro1 cart_pro" aria-controls="cart_select1" data-index-filled ="0">
+                  <div id="cart_select1" class="cart_selection" data-show-item="true">
+                    <div class="mini_image">
+                      <img src="./images/image-product-1-thumbnail.jpg" class="ready_buy" alt="Oops">
+                    </div>
+                    <div class="edition_range" data-edition-time="true">
+                      <p class="edition_title" >Fall Limited Edition Sneakers</p>
+                      <div class="price_cover">
+                        <p id="first_price" class="price_one">$<span class="unit_price">125</span> <span class="symbol_multiply">&times;</span> 
+                            <span class="number_item"></span>
+                        </p>
+                        <h4 class="total_price">$<span class="bill_totalprice"></span></h4>
                       </div>
-                      <div class="edition_range">
-                        <p>Fall Limited Edition Sneakers</p>
-                        <div>
-                            <p class="price_one">$ &times;</p>
-                            <p class="number_item">3</p>
-                            <h4 class="total_price">$</h4>
-                        </div>
-                      </div>
-                      <div class="delete_sign">
-                        <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
-                      </div>
+                    </div>
+                    <div class="delete_sign">
+                      <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
                     </div>
                     <button  type="button" class="cart_checkout">Checkout</button>
                   </div>
-    
-                  <div class="cart_pro2 cart_pro" data-show-item="false" data-index-filled ="1">
-                     <div class="cart_selection">
-                      <div class="mini_image">
-                        <img src="./images/image-product-2-thumbnail.jpg" class="ready_buy" alt="Oops">
+                </div>
+  
+                <div class="cart_pro2 cart_pro" aria-controls="cart_select2" data-index-filled ="1">
+                  <div id="cart_select2" class="cart_selection" data-show-item="false">
+                    <div class="mini_image">
+                      <img src="./images/image-product-2-thumbnail.jpg" class="ready_buy" alt="Oops">
+                    </div>
+                    <div class="edition_range" data-edition-time="false">
+                      <p class="edition_title">Summer limited Edition...</p>
+                      <div class="price_cover">
+                        <p class="price_one" data-price-item="false">$<span  class="unit_price">145</span> <span class="symbol_multiply">&times;</span> 
+                          <span  class="number_item"></span>
+                        </p>
+                        <h4 class="total_price">$<span class="bill_totalprice"></span></h4>
                       </div>
-                      <div class="edition_range">
-                        <p>Summer limited Edition...</p>
-                        <div>
-                          <p class="price_one">$ &times;</p>
-                          <p class="number_item">3</p>
-                          <h4 class="total_price">$</h4>
-                        </div>
-                      </div>
-                      <div class="delete_sign">
-                        <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
-                      </div>
-                     </div>
+                    </div>
+                    <div class="delete_sign">
+                      <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
+                    </div>
+                    <button  type="button" class="cart_checkout">Checkout</button>
                   </div>
+                </div>
 
-                  <div class="cart_pro3 cart_pro" data-show-item="false" data-index-filled ="2">
-                    <div class="cart_selection">
-                      <div class="mini_image">
-                        <img src="./images/image-product-3-thumbnail.jpg" class="ready_buy" alt="Oops">
-                      </div>
-                      <div class="edition_range">
-                        <p>Spring limited Edition...s</p>
-                        <div>
-                          <p class="price_one">$ &times;</p>
-                          <p class="number_item">3</p>
-                          <h4 class="total_price">$</h4>
-                        </div>
-                      </div>
-                      <div class="delete_sign">
-                        <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
+                <div class="cart_pro3 cart_pro"  aria-controls="cart_select3" data-index-filled ="2">
+                  <div id="cart_select3" class="cart_selection" data-show-item="false">
+                    <div class="mini_image">
+                      <img src="./images/image-product-3-thumbnail.jpg" class="ready_buy" alt="Oops">
+                    </div>
+                    <div class="edition_range" data-edition-time="false">
+                      <p class="edition_title">Spring limited Edition...s</p>
+                      <div class="price_cover">
+                        <p class="price_one" data-price-item="false">$<span class="unit_price" >170</span> <span class="symbol_multiply">&times;</span> 
+                          <span class="number_item"></span>
+                        </p>
+                        <h4 class="total_price">$<span class="bill_totalprice"></span></h4>
                       </div>
                     </div>
+                    <div class="delete_sign">
+                      <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
+                    </div>
+                    <button  type="button" class="cart_checkout">Checkout</button>
                   </div>
-                  <div class="cart_pro4 cart_pro" data-show-item="false" data-index-filled ="3">
-                    <div class="cart_selection">
-                      <div class="mini_image">
-                        <img src="./images/image-product-4-thumbnail.jpg" class="ready_buy" alt="Oops">
-                      </div>
-                      <div class="edition_range">
-                        <p>Autumn limited Edition...</p>
-                        <div>
-                          <p class="price_one">$ &times;</p>
-                          <p class="number_item">3</p>
-                          <h4 class="total_price">$</h4>
-                        </div>
-                      </div>
-                      <div class="delete_sign">
-                        <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
+                </div>
+
+                <div class="cart_pro4 cart_pro" aria-controls="cart_select4" data-index-filled ="3">
+                  <div id="cart_select4" class="cart_selection" data-show-item="false">
+                    <div class="mini_image">
+                      <img src="./images/image-product-4-thumbnail.jpg" class="ready_buy" alt="Oops">
+                    </div>
+                    <div class="edition_range" data-edition-time="false">
+                      <p class="edition_title">Autumn limited Edition...</p>
+                      <div class="price_cover">  
+                        <p class="price_one" data-price-item="false">$<span class="unit_price">195</span> <span class="symbol_multiply">&times;</span> 
+                          <span class="number_item"></span>
+                        </p>
+                        <h4 class="total_price">$<span class="bill_totalprice"></span></h4>
                       </div>
                     </div>
+                    <div class="delete_sign">
+                      <img src="./images/icon-delete.svg" class="icon_delete" alt="Oops">
+                    </div>
+                    <button  type="button" class="cart_checkout">Checkout</button>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </nav>
-      </section>
+        </div>
+      </nav>
+    </section>
 
-      <section class="item_selection">
-        <div class="items">
-          <div class="item_1 item_sell" data-show-item="true">
-            <img src="./images/image-product-1.jpg" class="your_shoes" alt="Oops">
-          </div>
-          <div class="item_2 item_sell" data-show-item="false">
-            <img src="./images/image-product-2.jpg" class="your_shoes" alt="Oops">
-          </div>
-          <div class="item_3 item_sell" data-show-item="false">
-            <img src="./images/image-product-3.jpg" class="your_shoes" alt="Oops">
-          </div>
-          <div class="item_4 item_sell" data-show-item="false">
-            <img src="./images/image-product-4.jpg" class="your_shoes" alt="Oops">
-          </div>
+    <section class="item_selection">
+      <div class="items">
+        <div class="item_1 item_sell" data-show-item="true">
+          <img src="./images/image-product-1.jpg" class="your_shoes" alt="Oops">
         </div>
-        <div class="slider_arrow">
-          <button type="button" class="icon_arrowleft" aria-controls="item_advertising">
-            <img src="./images/icon-previous.svg" alt="Oops">
-          </button>
-          <button type="button" class="icon_arrowright" aria-controls="item_advertising">
-            <img src="./images/icon-next.svg" alt="Oops">
-          </button>
+        <div class="item_2 item_sell" data-show-item="false">
+          <img src="./images/image-product-2.jpg" class="your_shoes" alt="Oops">
         </div>
-        <div class="sliders_image">
-          <div class="sliding_img">
-            <img src="./images/image-product-1-thumbnail.jpg" class="slide_curve" data-index-filled ="0" alt="Oops">
-          </div>
-          <div class="sliding_img">
-            <img src="./images/image-product-2-thumbnail.jpg" class="slide_curve" data-index-filled ="1" alt="Oops">
-          </div>
-          <div class="sliding_img">
-            <img src="./images/image-product-3-thumbnail.jpg" class="slide_curve" data-index-filled ="2" alt="Oops">
-          </div>
-          <div class="sliding_img">
-            <img src="./images/image-product-4-thumbnail.jpg" class="slide_curve" data-index-filled ="3" alt="Oops">
-          </div>
+        <div class="item_3 item_sell" data-show-item="false">
+          <img src="./images/image-product-3.jpg" class="your_shoes" alt="Oops">
         </div>
-      </section>
+        <div class="item_4 item_sell" data-show-item="false">
+          <img src="./images/image-product-4.jpg" class="your_shoes" alt="Oops">
+        </div>
+      </div>
+      <div class="slider_arrow">
+        <button type="button" class="icon_arrowleft" aria-controls="item_advertising">
+          <img src="./images/icon-previous.svg" alt="Oops">
+        </button>
+        <button type="button" class="icon_arrowright" aria-controls="item_advertising">
+          <img src="./images/icon-next.svg" alt="Oops">
+        </button>
+      </div>
+      <div class="sliders_image">
+        <div class="sliding_img">
+          <img src="./images/image-product-1-thumbnail.jpg" class="slide_curve" data-index-filled ="0" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-2-thumbnail.jpg" class="slide_curve" data-index-filled ="1" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-3-thumbnail.jpg" class="slide_curve" data-index-filled ="2" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-4-thumbnail.jpg" class="slide_curve" data-index-filled ="3" alt="Oops">
+        </div>
+      </div>
+    </section>
 
-      <section class="price_component">
-        <div class="price_container">
-          <div class="brand_company brand_box1">
-            <div class="brand_presentation">
-              <h3>Sneaker Company</h3>
-              <h1 class="item_advertising" data-show-item="true">Fall Limited Edition Sneakers</h1>
-              <h1 class="item_advertising" data-show-item="false">Summer limited Edition...</h1>
-              <h1 class="item_advertising" data-show-item="false">Spring limited Edition...</h1>
-              <h1 class="item_advertising" data-show-item="false">Autumn limited Edition...</h1>
-              <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
-              durable rubber outer sole, they’ll withstand everything the weather can offer.
-              </p>
-            </div>  
-          </div>
-          <div class="amount_bill">
-            <div class="price_discount">
-              <div class="price_item">
-                <h1 class="h1_price">$125.00</h1>
-              </div>
-              <div class="discount">
-                <h3> 50%</h3>
-              </div>
+    <section class="item_selection_float">
+      <div class="close_floating">
+        <img src="./images/icon-close.svg" alt="oops" class="icon_close_float">
+      </div>
+      <div class="items_new">
+        <div class="item_1 item_sell_new">
+          <img src="./images/image-product-1.jpg" class="your_shoes" alt="Oops">
+        </div>
+        <div class="item_2 item_sell_new">
+          <img src="./images/image-product-2.jpg" class="your_shoes" alt="Oops">
+        </div>
+        <div class="item_3 item_sell_new">
+          <img src="./images/image-product-3.jpg" class="your_shoes" alt="Oops">
+        </div>
+        <div class="item_4 item_sell_new">
+          <img src="./images/image-product-4.jpg" class="your_shoes" alt="Oops">
+        </div>
+      </div>
+      <div class="slider_arrow_new">
+        <button type="button" class="icon_arrowleft" aria-controls="item_advertising">
+          <img src="./images/icon-previous.svg" class="icon_img_arrowleft" alt="Oops">
+        </button>
+        <button type="button" class="icon_arrowright" aria-controls="item_advertising">
+          <img src="./images/icon-next.svg" class="icon_img_arrowright" alt="Oops">
+        </button>
+      </div>
+      <div class="sliders_image_new">
+        <div class="sliding_img">
+          <img src="./images/image-product-1-thumbnail.jpg" class="slide_curve_new" data-index-filled ="0" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-2-thumbnail.jpg" class="slide_curve_new" data-index-filled ="1" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-3-thumbnail.jpg" class="slide_curve_new" data-index-filled ="2" alt="Oops">
+        </div>
+        <div class="sliding_img">
+          <img src="./images/image-product-4-thumbnail.jpg" class="slide_curve_new" data-index-filled ="3" alt="Oops">
+        </div>
+      </div>
+    </section>
+
+    <section class="price_component">
+      <div class="price_container">
+        <div class="brand_company brand_box1">
+          <div class="brand_presentation">
+            <h3>Sneaker Company</h3>
+            <h1 class="item_advertising" data-show-item="true">Fall Limited Edition Sneakers</h1>
+            <h1 class="item_advertising" data-show-item="false">Summer limited Edition...</h1>
+            <h1 class="item_advertising" data-show-item="false">Spring limited Edition...</h1>
+            <h1 class="item_advertising" data-show-item="false">Autumn limited Edition...</h1>
+            <p>These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.
+            </p>
+          </div>  
+        </div>
+        <div class="amount_bill">
+          <div class="price_discount">
+            <div class="price_item">
+              <h1 class="h1_price" data-h1-view="true" data-h1-view-new="true">$ <span class="h1_pricenumber">125.00</span></h1>
+              <h1 class="h1_price" data-h1-view="false" data-h1-view-new="false">$<span class="h1_pricenumber">145.00</span></h1>
+              <h1 class="h1_price" data-h1-view="false" data-h1-view-new="false">$<span class="h1_pricenumber">170.00</span></h1>
+              <h1 class="h1_price" data-h1-view="false" data-h1-view-new="false">$<span class="h1_pricenumber">195.00</span></h1>
             </div>
-            <div class="new_price"><p class="ft_price">$250.00</p></div>
-          </div>
-          <div class="cart_validation">
-            <div class="number_box">
-             <div class="box_numberquantity">
-                <span class="soustraction"><img src="./images/icon-minus.svg" class="icon_minus" alt="Oops"></span>
-                <input type="number" name="numbers-item"  value="3" id="number_selected" placeholder="0">
-                <span class="addition"><img src="./images/icon-plus.svg" class="icon_plus" alt="Oops"></span>
-             </div>
-             <div class="cart_validationbutton">
-               <div class="cart_art">
-                <a href="#" class="cart_link">
-                  <img src="./images/icon-cart.svg"  class="icon_cart" data-add-cart="false" alt="Oops"><p class="cart_add" >Add to Cart</p>
-                 </a>
-               </div>
-             </div>
+            <div class="discount">
+              <h3> 50%</h3>
             </div>
+          </div>
+          <div class="old_price">
+            <p class="ft_price" data-perform-price="true">$250.00</p>
+            <p class="ft_price" data-perform-price="false">$290.00</p>
+            <p class="ft_price" data-perform-price="false">$340.00</p>
+            <p class="ft_price" data-perform-price="false">$390.00</p>
           </div>
         </div>
-      </section>
-      <footer class="end_pitch">
-        <div class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-          Coded by <a href="#">Be in Rain 06</a>.
+        <div class="cart_validation">
+          <div class="number_box">
+           <div class="box_numberquantity">
+              <div class="soustraction"><img src="./images/icon-minus.svg" class="icon_minus" alt="Oops"></div>
+              <input type="number" name="numbers-item"  value="0" id="number_selected" placeholder="0" disabled>
+              <div class="addition"><img src="./images/icon-plus.svg" class="icon_plus" alt="Oops"></div>
+           </div>
+           <div class="cart_validationbutton">
+             <div class="cart_art">
+              <a href="#welcome" class="cart_link">
+                <img src="./images/icon-cart.svg"  class="icon_cart" data-add-cart="false" alt="Oops"><p class="cart_add" >Add to Cart</p>
+               </a>
+             </div>
+           </div>
+          </div>
         </div>
-      </footer>
-    </main>
-  </div>
+      </div>
+    </section>
+    <footer class="end_pitch">
+      <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Be in Rain 06</a>.
+      </div>
+    </footer>
+  </main>
   
   <script src="./js/scripts.js"></script>
 </body>

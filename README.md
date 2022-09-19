@@ -1,22 +1,25 @@
-# Frontend Mentor - E-commerce product page
+# Frontend Mentor - E-commerce product page solution
 
-![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)
+This is a solution to the [E-commerce product page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/ecommerce-product-page-UPsZ9MJp6). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
-## Welcome! 👋
+## Table of contents
 
-Thanks for checking out this front-end coding challenge.
+- [Overview](#overview)
+  - [The challenge](#the-challenge)
+  - [Screenshot](#screenshot)
+  - [Links](#links)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Continued development](#continued-development)
+  - [Useful resources](#useful-resources)
+- [Author](#author)
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+## Overview
 
-**To do this challenge, you need a good understanding of HTML, CSS and JavaScript.**
+### The challenge
 
-## The challenge
-
-Your challenge is to build out this e-commerce product page and get it looking as close to the design as possible.
-
-You can use any tools you like to help you complete the challenge. So if you've got something you'd like to practice, feel free to give it a go.
-
-Your users should be able to:
+Users should be able to:
 
 - View the optimal layout for the site depending on their device's screen size
 - See hover states for all interactive elements on the page
@@ -25,72 +28,118 @@ Your users should be able to:
 - Add items to the cart
 - View the cart and remove items from it
 
-Want some support on the challenge? [Join our Slack community](https://www.frontendmentor.io/slack) and ask questions in the **#help** channel.
+### Screenshot
 
-## Where to find everything
+<!-- Mobile Responsiveness -->
 
-Your task is to build out the project to the designs inside the `/design` folder. You will find both a mobile and a desktop version of the design.
+![./Mobile-Screenshot_1.png](./screenshot.jpg)
+![./Mobile-Screenshot_2.png](./screenshot.jpg)
+![./Mobile-Screenshot_3.png](./screenshot.jpg)
+![./Mobile-Screenshot_4.png](./screenshot.jpg)
 
-The designs are in JPG static format. Using JPGs will mean that you'll need to use your best judgment for styles such as `font-size`, `padding` and `margin`.
+<!-- Desktop Responsiveness -->
 
-If you would like the design files (we provide Sketch & Figma versions) to inspect the design in more detail, you can [subscribe as a PRO member](https://www.frontendmentor.io/pro).
+![./Desktop-Screenshot_1.png](./screenshot.jpg)
+![./Desktop-Screenshot_2.png](./screenshot.jpg)
+![./Desktop-Screenshot_3.png](./screenshot.jpg)
 
-You will find all the required assets in the `/images` folder. The assets are already optimized.
+### Links
 
-There is also a `style-guide.md` file containing the information you'll need, such as color palette and fonts.
+- Solution URL: [https://github.com/BeinRain06/ecommerce-product-page-main.git]
+- Live Site URL: [https://beinrain06.github.io/ecommerce-product-page-main/]
 
-## Building your project
+## My process
 
-Feel free to use any workflow that you feel comfortable with. Below is a suggested process, but do not feel like you need to follow these steps:
+### Built with
 
-1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
-2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
-3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
-4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
-5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
-6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+- Semantic HTML5 markup
+- CSS custom properties
+- Flexbox
+- CSS Grid
+- Javascript
 
-## Deploying your project
+### What I learned
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
+*make **icon** keep regular spacing*
 
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
+Through the process of styling **slider arrow icons** with css *iconsArrowrigth* and  *iconsArrowLeft* tend to randomly change spacing in either x-axis or Y-axis between them, each time the web browser is barely resize in order to achieve responsiveness.
+By going right the project We find out a way to **fix** the x-position of the two icons using **top and left** , with **top and right**.
 
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+here a snippet code belonging to the button icon arrow left and the button icon arrow right:
 
-## Create a custom `README.md`
+```css
+.slider_arrow_new button.icon_arrowleft{
+  position: absolute;
+  top: 0;
+  left: calc(4vw - 5vw);
+  width: 30px;
+  height: 30px;
+  padding: 0.5rem;
+}
 
-We strongly recommend overwriting this `README.md` with a custom one. We've provided a template inside the [`README-template.md`](./README-template.md) file in this starter code.
+.slider_arrow_new button.icon_arrowright{
+  position: absolute;
+  top: 0;
+  right: calc(4vw - 1vw);
+  width: 30px;
+  height: 30px;
+  padding: 0.5rem;
+  margin: 0 auto;
+}
+```
 
-The template provides a guide for what to add. A custom `README` will help you explain your project and reflect on your learnings. Please feel free to edit our template as much as you like.
+*resizing a box with `position:absolute` as same iin width as **background-image** where is **popping up over***
 
-Once you've added your information to the template, delete this file and rename the `README-template.md` file to `README.md`. That will make it show up as your repository's README file.
+At the other hand according to a size continuously growing of the **main shoes background-image** we need to aettle **CartBox**  size  with the actual size each time reaches by the **background-image**.
+We come up with the idea of using **vw** for `width` and the method **calc()** the `height`.
+here below are the lines code used:
 
-## Submitting your solution
+```css
+.cart_box[data-cart-toggled="true"]{
+  position: absolute;
+  top: 1.22rem;
+  left: 0;
+  transform: translateX(-4%);
+  width: 100vw;
+  height: calc(84vw);
+}
+```
+the CartBox is accessible by clicking the *image cart* nest to the avatar.
 
-Submit your solution on the platform for the rest of the community to see. Follow our ["Complete guide to submitting solutions"](https://medium.com/frontend-mentor/a-complete-guide-to-submitting-solutions-on-frontend-mentor-ac6384162248) for tips on how to do this.
+*`input:button` with **position:fixed***
 
-Remember, if you're looking for feedback on your solution, be sure to ask questions when submitting it. The more specific and detailed you are with your questions, the higher the chance you'll get valuable feedback from the community.
+ `Position:fixed` property set to **a button** within a box that is set with `position:absolute`  design sometimes looks suitable than using `Position:relative` as it leads to few **customization**.  
+the small codes uunderneath is the one use for the style of the `button:checkout` :
 
-## Sharing your solution
+```css
+button[class="cart_checkout"]{
+  position: fixed;
+  top: -2rem;
+  left: 0;
+  padding: 0.8rem 1rem;
+  transform: translate(0, 480%);
+  width: 100%;
+  margin: 0 auto;
+}
+```
 
-There are multiple places you can share your solution:
+### Continued development
 
-1. Share your solution page in the **#finished-projects** channel of the [Slack community](https://www.frontendmentor.io/slack). 
-2. Tweet [@frontendmentor](https://twitter.com/frontendmentor) and mention **@frontendmentor**, including the repo and live URLs in the tweet. We'd love to take a look at what you've built and help share it around.
-3. Share your solution on other social channels like LinkedIn.
-4. Blog about your experience building your project. Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned. Great platforms to write on are [dev.to](https://dev.to/), [Hashnode](https://hashnode.com/), and [CodeNewbie](https://community.codenewbie.org/).
+This project leads us to use many =**data-attributes** all along his writing. This, associate a need to know much about **managing and storing data**. Goods skills to ease the code  comprehension , and too, to reduce tremendously the numbers of lines codes *being written*.  
 
-We provide templates to help you share your solution once you've submitted it on the platform. Please do edit them and include specific questions when you're looking for feedback. 
+### Useful resources
 
-The more specific you are with your questions the more likely it is that another member of the community will give you feedback.
+- [https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-expanded] This resource allow me to find out what is `aria-expanded` attribute and how to use it to toggle and control a *button menu*.
 
-## Got feedback for us?
+- [https://stackoverflow.com/questions/14483589/z-index-not-working-with-position-absolute]- I learned with stackoverflow that you cannot affect a property **z-index** to a floating box. When saying floating, i talk about a box where position is set to `absolute`. By that i review how to handle *the function* that display the **itemSelectionFloat section** to overlap *the body default style* essentially achieves
 
-We love receiving feedback! We're always looking to improve our challenges and our platform. So if you have anything you'd like to mention, please email hi[at]frontendmentor[dot]io.
+- [https://developer.mozilla.org/en-US/docs/Web/API/Document_object_model/How_to_create_a_DOM_tree]- I learned to set attribute created by myself with these examples being given with *mdn reference*.
 
-This challenge is completely free. Please share it with anyone who will find it useful for practice.
+## Author
 
-**Have fun building!** 🚀
+- Website - [Ngouend Raoul Gerard](https://www.your-site.com)
+- Frontend Mentor - [https://www.frontendmentor.io/profile/BeinRain06](https://www.frontendmentor.io/profile/yourusername)
+- Twitter - [https://www.twitter.com/nest_Ngoueni](https://www.twitter.com/yourusername)
+- LinkedIn - [https://www.linkedin.com/ngouend-gerard-5a0584244](https://www.twitter.com/yourusername)
+
+
