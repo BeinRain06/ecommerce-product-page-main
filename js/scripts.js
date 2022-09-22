@@ -174,7 +174,8 @@ function decrementNumber(){
 
 iconArrowRight.addEventListener('click', arrowNextSlide);
 
-function arrowNextSlide(){
+function arrowNextSlide(e){
+  e.preventDefault();
   n= 1;
   slideIndex= slideIndex + n;
   if(slideIndex > mainPictures.length){
@@ -199,7 +200,8 @@ function arrowNextSlide(){
 
 iconArrowLeft.addEventListener('click', arrowPreviousSlide);
 
-function arrowPreviousSlide(){
+function arrowPreviousSlide(e){
+  e.preventDefault();
   let slideIndexPrevious;
   n= -1;
   slideIndex= slideIndex + n;
@@ -228,7 +230,7 @@ function arrowPreviousSlide(){
   collectNumberItems.indexPicture= slideIndexPrevious - 1;
 }
 
-deleteSelection.addEventListener('click', deleteCartMenuPrice);
+deleteSelection.addEventListener('mousedown', deleteCartMenuPrice);
 
 function deleteCartMenuPrice(){
   let b= collectNumberItems.indexPicture;

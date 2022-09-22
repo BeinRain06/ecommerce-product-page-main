@@ -873,26 +873,27 @@ button.icon_arrowright{
 }
 
 .brand_presentation h1.item_advertising[data-show-item="false"]{
-  position: absolute;
-  top: 0; 
-  left: 0;
-  transform: translateX(-100%);
+  position: relative;
+  top: 2.4rem; 
+  left:0;
+  transform: translate(-100%,-100%);
   width: 80vw;
-  opacity: 0.8;
-  transition: transform 380ms ease-in ,visibility 480ms ease-in, opacity 500ms ease-in-out;
+  opacity: 0.4;
   visibility: hidden;
-  
+  /* transition: transform 300ms linear ,visibility 100ms ease-in, opacity 100ms ease-in-out; */
+  transition: transform 100ms linear, top 200ms ease-in-out;
 }
 
 .brand_presentation h1.item_advertising[data-show-item="true"]{
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
-  transform: translateX(0);
+  transform: translate(0, 0);
   width: 80vw;
   opacity: 1;
-  transition: transform 380ms ease-in ,visibility 480ms ease-in, opacity 500ms ease-in-out;
   visibility: visible;
+  /* transition: transform 300ms linear ,visibility 100ms ease-in, opacity 100ms ease-in-out;  */
+  transition: transform 100ms linear, top 200ms ease-in-out;
 }
 
 
